@@ -3,69 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ikanos Systems</title>
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #ffffff;
-    --fg: #111111;
-    --muted: #666666;
-    --accent: #2b2b2b;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0b0b0c;
-      --fg: #f2f2f2;
-      --muted: #9a9a9a;
-      --accent: #e5e5e5;
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-  }
-  main {
-    max-width: 480px;
-  }
-  h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    margin: 0 0 0.75rem;
-    color: var(--accent);
-  }
-  p {
-    font-size: 1rem;
-    color: var(--muted);
-    margin: 0 0 1.5rem;
-    line-height: 1.5;
-  }
-  a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  a:hover {
-    color: var(--accent);
-  }
-</style>
+<title>Ikanos Systems — Bespoke app development, San Diego</title>
+<meta name="description" content="Ikanos Systems LLC is a San Diego software studio building bespoke iOS, Android and web applications for business and consumer products, including the AI that makes them useful.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/">Ikanos Systems</a>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/work.html">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1>Ikanos Systems LLC</h1>
-  <p>Site coming soon.</p>
-  <p><a href="mailto:hello@ikanossystems.ai">hello@ikanossystems.ai</a></p>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Bespoke applications, built end to end.</h1>
+      <p class="lede">
+        Ikanos Systems is a software studio in San Diego, California. We design,
+        build and operate iOS, Android and web applications for business and
+        consumer products — including the search, recognition and machine
+        learning that make them worth opening twice.
+      </p>
+      <div class="actions">
+        <a class="button" href="/contact.html">Start a conversation</a>
+        <a class="button secondary" href="/services.html">What we do</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What we build</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Mobile applications</h3>
+          <p class="muted">
+            Native and cross-platform apps for iOS and Android, including the
+            parts that are genuinely hard: background upload that survives the
+            app being killed, offline behaviour, and sync that holds up on a
+            bad connection.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Web and backend</h3>
+          <p class="muted">
+            APIs, data models and web clients, deployed on infrastructure sized
+            to the problem. We are as comfortable on a rented server running
+            Docker as on a managed cloud, and we will tell you which one your
+            budget actually calls for.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Applied AI</h3>
+          <p class="muted">
+            Semantic search, image and face recognition, and vector databases —
+            self-hosted where privacy or cost demands it. Features that use a
+            model because it answers a real question, not because it is on the
+            roadmap.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>For business, and for consumer</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>B2B</h3>
+          <p class="muted">
+            Internal tools, customer-facing portals and the integrations between
+            systems that were never designed to speak to each other. Work that
+            is judged on whether it is reliable on a Monday morning, and on
+            whether your team can maintain it after we leave.
+          </p>
+        </div>
+        <div class="card">
+          <h3>B2C</h3>
+          <p class="muted">
+            Consumer products shipped to the App Store and Google Play, where
+            the first thirty seconds decide everything. We build the whole path
+            — the app, the service behind it, and the operational work of
+            keeping it running.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap prose">
+      <h2>How we work</h2>
+      <ul>
+        <li><strong>Senior engineers only.</strong> The person who designs your system is the person who writes it.</li>
+        <li><strong>You own the code.</strong> Your repository, your infrastructure accounts, your deployment. No lock-in to us as a vendor.</li>
+        <li><strong>Working software early.</strong> We build the thin slice that goes all the way through — upload to storage to screen — before adding anything to it, because that is what finds the problems worth knowing about.</li>
+        <li><strong>Honest about constraints.</strong> If a platform cannot do what a feature promises, we say so at the start rather than discovering it in testing.</li>
+      </ul>
+      <div class="actions">
+        <a class="button" href="/contact.html">Tell us about your project</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <nav>
+      <a href="/services.html">Services</a>
+      <a href="/work.html">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <p>Ikanos Systems LLC · San Diego, California</p>
+    <p><a href="mailto:hello@ikanossystems.ai">hello@ikanossystems.ai</a></p>
+    <p>© 2026 Ikanos Systems LLC. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>

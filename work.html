@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Ikanos Systems</title>
+<meta name="description" content="Photo App: a self-hosted AI photo library with semantic search, face and pet recognition, and automatic mobile backup. An in-house product from Ikanos Systems LLC.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/">Ikanos Systems</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/work.html" aria-current="page">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Work</h1>
+      <p class="lede">
+        We build our own products as well as our clients'. It is the most
+        honest way to show what we do, and the fastest way to learn what a
+        platform will and will not permit.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap prose">
+      <h2>Photo App — a private, searchable photo library</h2>
+      <p>
+        An in-house product, currently in development and running against a
+        real library of more than five thousand photographs. It backs up the
+        photographs on your phone to a server you control, and then makes them
+        findable.
+      </p>
+      <p>
+        The premise is that storage is not the interesting problem. Everybody
+        sells storage. What people actually want is to find the photograph they
+        are thinking of — the dog on the beach, a particular person at a
+        particular birthday — across a decade of files nobody has ever labelled.
+      </p>
+
+      <h3>What it does</h3>
+      <ul>
+        <li><strong>Search by description.</strong> "At the beach", "a birthday cake", "snow" — matched against what the photographs look like, not against filenames or tags.</li>
+        <li><strong>Search by person and by pet.</strong> Faces and animals are detected, grouped by identity, and named once. After that they are searchable by name, including "this person at the beach", which combines both.</li>
+        <li><strong>Automatic backup from the phone.</strong> Android and iOS apps upload new photographs in the background, continuing after the app is closed and resuming after a failed connection.</li>
+        <li><strong>Recoverable deletion and offsite backups.</strong> Nothing is destroyed immediately, and a second copy lives with a different provider from the server.</li>
+      </ul>
+
+      <h3>How it is built</h3>
+      <dl class="spec">
+        <dt>Applications</dt>
+        <dd>React Native and TypeScript for iOS and Android, with the upload engine written natively on each platform — Kotlin against WorkManager, Swift against background <code>URLSession</code>. A web client with no build step.</dd>
+        <dt>Service</dt>
+        <dd>Python and FastAPI, PostgreSQL with pgvector for vector search, Redis for the processing queue, and S3-compatible object storage. Docker Compose on a rented server.</dd>
+        <dt>Models</dt>
+        <dd>CLIP for image and text embeddings, ArcFace for face identity, served as quantised ONNX rather than a full deep-learning framework — the difference between running on a small server and needing a large one.</dd>
+        <dt>Operations</dt>
+        <dd>TLS, nightly database dumps and hourly object replication to a separate provider, and a production configuration that refuses to start when it is misconfigured rather than failing quietly later.</dd>
+      </dl>
+
+      <h3>Why it is on this page</h3>
+      <p>
+        Every hard part of this product is a hard part of somebody else's:
+        background upload that survives the operating system closing your app,
+        search that understands intent, recognition that declines to guess, and
+        backups that have actually been restored. That is the work we are
+        offering.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="/contact.html">Talk to us about yours</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav>
+      <a href="/services.html">Services</a>
+      <a href="/work.html">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <p>Ikanos Systems LLC · San Diego, California</p>
+    <p><a href="mailto:hello@ikanossystems.ai">hello@ikanossystems.ai</a></p>
+    <p>© 2026 Ikanos Systems LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
